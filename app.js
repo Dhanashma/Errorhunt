@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname , '/public')));
 
 app.use('/login',loginRouter); 
 app.use('/signup',signupRouter); 
-app.use('/home',homeRouter); 
+app.use('/home',homeRouter);//Part #1 Point 3 
 app.use('/books',booksRouter); 
 app.use('/authors',authorsRouter); 
 
@@ -59,4 +59,4 @@ app.get('/',function(req,res){
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+  });//Part #1 Point 5
