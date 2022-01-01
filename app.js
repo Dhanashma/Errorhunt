@@ -57,6 +57,6 @@ app.get('/',function(req,res){
 
 
 
-app.listen(3000,()=>{
-    console.log("Server Ready on 3000"); //Part #1, Point 5 port number changed
-});
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
